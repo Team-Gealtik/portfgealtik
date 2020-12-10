@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django-heroku
+import django_heroku
 import dj_database_url
 import dotenv
 
@@ -28,9 +28,11 @@ if os.path.isfile(dotenv_file):
 #options = DATABASES['default'].get('OPTIONS', {})
 #options.pop('sslmode', None)
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
+# This should already be in your settings.py
+#django_heroku.settings(locals())
+# This is new
+#options = DATABASES['default'].get('OPTIONS', {})
+#options.pop('sslmode', None)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -66,8 +68,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+  'django.middleware.security.SecurityMiddleware',
+  'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
