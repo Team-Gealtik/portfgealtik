@@ -47,6 +47,7 @@ ALLOWED_HOSTS = ['0.0.0.0','localhost','proftgealtik-production.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
