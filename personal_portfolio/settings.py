@@ -22,17 +22,6 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-# This should already be in your settings.py
-if '/app' in os.environ['HOME']:
-    import django_heroku
-    django_heroku.settings(locals())
-# This is new
-
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -173,3 +162,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']
