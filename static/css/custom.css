@@ -1,327 +1,484 @@
-/* Slider */
-#slider{
-    width:100%;
-    height:500px;
-    position:relative;
-    overflow:hidden;
+
+.benefits-carousel__headline,
+.benefits-carousel__body-copy,
+.benefits-carousel__body-link {
+  color: #47525d;
+  font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+  padding: 0;
+  margin: 0
+}
+
+.benefits-carousel__headline {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.8
+}
+
+.benefits-carousel__headline {
+  font-weight: 100
+}
+
+.benefits-carousel__body-copy,
+.benefits-carousel__body-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8
+}
+
+.benefits-carousel__body-copy {
+  font-weight: 100
+}
+
+.benefits-carousel__image-list,
+.benefits-carousel__copy-list,
+.benefits-carousel__bullet-list {
+  padding: 0;
+  margin: 0;
+  list-style: none
+}
+
+.benefits-carousel {
+  padding: 60px 0 55px;
+  background: #f5f3f4
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel {
+    padding: 40px 0 40px
   }
-  @keyframes load{
-    from{left:-100%;}
-    to{left:0;}
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel {
+    padding-bottom: 20px;
+    overflow: hidden
   }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 30s infinite;
-    -moz-animation:slide 30s infinite;
-    animation:slide 30s infinite;
+}
+
+.benefits-carousel__arrow {
+  display: none
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__arrow {
+    -webkit-transition: right 250ms ease 0s;
+    transition: right 250ms ease 0s;
+    display: inline-block;
+    position: relative;
+    right: 100px;
+    bottom: 0
   }
-  .slider{
-    width:25%;
-    height:100%;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
+  .benefits-carousel__arrow:hover,
+  .benefits-carousel__arrow:focus {
+    -webkit-transition: right 250ms ease 0s;
+    transition: right 250ms ease 0s;
+    right: 95px
   }
-  .slide img{
-    width:100%;
-    height:100%;
+}
+
+@media (min-width: 1200px) {
+  .benefits-carousel__arrow {
+    right: 40px
   }
-  .slide img{
-    width:100%;
-    height:100%;
+  .benefits-carousel__arrow:hover,
+  .benefits-carousel__arrow:focus {
+    -webkit-transition: right 250ms ease 0s;
+    transition: right 250ms ease 0s;
+    right: 35px
   }
-  .image{
-    width:100%;
-    height:100%;
+}
+
+.benefits-carousel__body-copy,
+.benefits-carousel__headline {
+  max-width: 650px;
+  margin: 0 auto
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__body-copy,
+  .benefits-carousel__headline {
+    max-width: 700px
   }
-  .image img{
-    width:100%;
-    height:auto;
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__body-copy,
+  .benefits-carousel__headline {
+    max-width: 650px
   }
-  
-  /* Legend */
-  .legend{
-    border:500px solid transparent;
-    border-left:800px solid rgba(52, 73, 94, .7);
-    border-bottom:0;
-    position:absolute;
-    bottom:0;
+}
+
+.benefits-carousel__body-copy {
+  margin-bottom: 0;
+  font-weight: 100;
+  line-height: 1.5
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__body-copy {
+    font-size: 21px
   }
-  
-  /* Contents */
-  .content{
-    width:100%;
-    height:100%;
-    position:absolute;
-    overflow:hidden;
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__body-copy {
+    margin-bottom: 20px
   }
-  .content-txt{
-    width:400px;
-    height:150px;
-    float:left;
-    position:relative;
-    top:300px;
-    -webkit-animation:content-s 7.5s infinite;
-    -moz-animation:content-s 7.5s infinite;
-    animation:content-s 7.5s infinite;
+}
+
+.benefits-carousel__body-link {
+  color: #007ee5
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__body-link {
+    font-size: 16px
   }
-  .content-txt h1{
-    font-family:Arial;
-    text-transform:uppercase;
-    font-size:24px;
-    color:#fff;
-    text-align:left;
-    margin-left:30px;
-    padding-bottom:10px;
+}
+
+.benefits-carousel__bullet-list {
+  margin: 5px 0
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__bullet-list {
+    margin: 15px 0 15px
   }
-  .content-txt h2{
-    font-family:arial;
-    font-weight:normal;
-    font-size:14px;
-    font-style:italic;
-    color:#fff;
-    text-align:left;
-    margin-left:30px;
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__bullet-list {
+    margin-bottom: 35px
   }
-  
-  /* Switch */
-  .switch{
-    width:120px;
-    height:10px;
-    position:absolute;
-    bottom:50px;
-    z-index:99;
-    left:30px;
+}
+
+.benefits-carousel__bullet {
+  -webkit-transition: background 250ms ease 0s;
+  transition: background 250ms ease 0s;
+  display: inline-block;
+  background: #d0d4d9;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer
+}
+
+.benefits-carousel__bullet:hover,
+.benefits-carousel__bullet:focus {
+  -webkit-transition: background 250ms ease 0s;
+  transition: background 250ms ease 0s;
+  background: #47525d
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__bullet {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px
   }
-  .switch > ul{
-    list-style:none;
+}
+
+.benefits-carousel__bullet:first-child {
+  margin-left: 0
+}
+
+.benefits-carousel__bullet.active {
+  -webkit-transition: background 250ms ease 0s;
+  transition: background 250ms ease 0s;
+  background: #7b8994;
+  cursor: default
+}
+
+.benefits-carousel__copy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  text-align: center;
+  overflow: hidden
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__copy {
+    max-width: 650px;
+    margin: 0 auto
   }
-  .switch > ul > li{
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#333;
-    float:left;
-    margin-right:5px;
-    cursor:pointer;
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__copy {
+    display: inline-block;
+    position: relative;
+    width: 380px;
+    right: 150px;
+    vertical-align: middle;
+    text-align: left
   }
-  .switch ul{
-    overflow:hidden;
+}
+
+@media (min-width: 1200px) {
+  .benefits-carousel__copy {
+    right: 100px
   }
-  .on{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    background:#f39c12;
-    position:relative;
-    -webkit-animation:on 30s infinite;
-    -moz-animation:on 30s infinite;
-    animation:on 30s infinite;
+}
+
+.benefits-carousel__copy-list {
+  width: 300%;
+  max-width: initial;
+  margin: 0 auto
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__copy-list {
+    width: 2100
   }
-  
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__copy-list {
+    width: 1950px
   }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__copy-list {
+    width: 1140px
   }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
+}
+
+.benefits-carousel__copy-item {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  opacity: 0;
+  width: 33.33333%;
+  max-width: initial;
+  padding: 0 20px;
+  vertical-align: middle;
+  -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__copy-item {
+    padding: 0
   }
-  
-  @-webkit-keyframes content-s{
-    0%{left:-420px;}
-    10%{left:0px;}
-    30%{left:0px;}
-    40%{left:0px;}
-    50%{left:0px;}
-    60%{left:0px;}
-    70%{left:0;}
-    80%{left:-420px;}
-    90%{left:-420px;}
-    100%{left:-420px;}
+}
+
+.benefits-carousel__copy-item.active {
+  display: inline-block;
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 150ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 150ms;
+  transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 150ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 150ms
+}
+
+.benefits-carousel__computer {
+  position: relative;
+  margin: 0 auto;
+  background: url("https://www.dropbox.com/static/images/business/homepage/computer-monitor-vflHvMurq.png") no-repeat;
+  background-size: contain;
+  width: 250px;
+  height: 195px
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+  .benefits-carousel__computer {
+    background: url("https://www.dropbox.com/static/images/business/homepage/computer-monitor@2x-vflT1Dtka.png") no-repeat;
+    background-size: contain
   }
-  @-moz-keyframes content-s{
-    0%{left:-420px;}
-    10%{left:0px;}
-    30%{left:0px;}
-    40%{left:0px;}
-    50%{left:0px;}
-    60%{left:0px;}
-    70%{left:0;}
-    80%{left:-420px;}
-    90%{left:-420px;}
-    100%{left:-420px;}
+}
+
+@media (min-width: 320px) {
+  .benefits-carousel__computer {
+    width: 320px;
+    height: 250px
   }
-  @keyframes content-s{
-    0%{left:-420px;}
-    10%{left:20px;}
-    15%{left:0px;}
-    30%{left:0px;}
-    40%{left:0px;}
-    50%{left:0px;}
-    60%{left:0px;}
-    70%{left:0;}
-    80%{left:-420px;}
-    90%{left:-420px;}
-    100%{left:-420px;}
+}
+
+@media (min-width: 500px) {
+  .benefits-carousel__computer {
+    width: 500px;
+    height: 390px
   }
-  
-  @-webkit-keyframes on{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:15px;
-    }
-    46%{
-      margin-left:15px;
-    }
-    50%{
-      margin-left:30px;
-    }
-    71%{
-      margin-left:30px;
-    }
-    75%{
-      margin-left:45px;
-    }
-    96%{
-      margin-left:45px;
-    }
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__computer {
+    width: 768px;
+    height: 600px
   }
-  
-  @-moz-keyframes on{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:15px;
-    }
-    46%{
-      margin-left:15px;
-    }
-    50%{
-      margin-left:30px;
-    }
-    71%{
-      margin-left:30px;
-    }
-    75%{
-      margin-left:45px;
-    }
-    96%{
-      margin-left:45px;
-    }
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__computer {
+    display: inline-block;
+    position: relative;
+    right: 230px;
+    vertical-align: middle
   }
-  
-  @keyframes on{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:15px;
-    }
-    46%{
-      margin-left:15px;
-    }
-    50%{
-      margin-left:30px;
-    }
-    71%{
-      margin-left:30px;
-    }
-    75%{
-      margin-left:45px;
-    }
-    96%{
-      margin-left:45px;
-    }
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__container {
+    width: 1200px;
+    margin: 0 auto
   }
-  
-  
-  .home-banner-area-s2  {
-      
+}
+
+.benefits-carousel__gradient {
+  overflow: hidden
+}
+
+.benefits-carousel__image-list {
+  width: 300%
+}
+
+.benefits-carousel__image-item {
+  display: inline-block;
+  position: relative;
+  width: 33.33333%;
+  bottom: 15px;
+  opacity: 0;
+  -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__image-item {
+    -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 200ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+    transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 200ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 200ms
   }
+}
+
+.benefits-carousel__image-item.active {
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@media (min-width: 991px) {
+  .benefits-carousel__image-item.active {
+    -webkit-transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 150ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 150ms;
+    transition: bottom 600ms cubic-bezier(0.23, 1, 0.32, 1) 150ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 150ms
+  }
+}
+
+.benefits-carousel__gradient {
+  -webkit-transition: background-color 400ms, background-size 1000ms;
+  transition: background-color 400ms, background-size 1000ms;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  width: 462px;
+  height: 255px;
+  background-image: -webkit-linear-gradient(to right bottom, rgba(255, 255, 255, 0.25) 0%, rgba(207, 207, 207, 0.25) 20%, rgba(97, 97, 97, 0.05) 65%, rgba(97, 97, 97, 0.2) 100%);
+  background-image: -webkit-linear-gradient(left top, rgba(255, 255, 255, 0.25) 0%, rgba(207, 207, 207, 0.25) 20%, rgba(97, 97, 97, 0.05) 65%, rgba(97, 97, 97, 0.2) 100%);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.25) 0%, rgba(207, 207, 207, 0.25) 20%, rgba(97, 97, 97, 0.05) 65%, rgba(97, 97, 97, 0.2) 100%);
+  background-size: 120%;
+  text-align: center
+}
+
+@media (min-width: 320px) {
+  .benefits-carousel__gradient {
+    width: 298px;
+    height: 165px;
+    top: 10px;
+    left: 11px
+  }
+}
+
+@media (min-width: 500px) {
+  .benefits-carousel__gradient {
+    width: 465px;
+    height: 256px;
+    top: 17px;
+    left: 17px
+  }
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__gradient {
+    width: 718px;
+    height: 397px;
+    top: 25px;
+    left: 25px
+  }
+}
+
+.benefits-carousel__gradient--orange {
+  background-color: #ff9f74;
+  background-size: 120%;
+  -webkit-transition: background-color 400ms, background-size 1000ms;
+  transition: background-color 400ms, background-size 1000ms
+}
+
+.benefits-carousel__gradient--blue {
+  background-color: #8ac5fd;
+  background-size: 100%;
+  -webkit-transition: background-color 400ms, background-size 1000ms;
+  transition: background-color 400ms, background-size 1000ms
+}
+
+.benefits-carousel__gradient--yellow {
+  background-color: #ffe374;
+  background-size: 105%;
+  -webkit-transition: background-color 400ms, background-size 1000ms;
+  transition: background-color 400ms, background-size 1000ms
+}
+
+.benefits-carousel__headline {
+  margin-bottom: 20px
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__headline {
+    margin-bottom: 15px;
+    font-size: 31px;
+    line-height: 1.5
+  }
+}
+
+@media (min-width: 1100px) {
+  .benefits-carousel__headline {
+    margin-bottom: 20px
+  }
+}
+
+.benefits-carousel__screenshot {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  top: 13px;
+  margin: 0 auto;
+  border-radius: 6px
+}
+
+@media (min-width: 320px) {
+  .benefits-carousel__screenshot {
+    max-width: 250px;
+    top: 5px
+  }
+}
+
+@media (min-width: 500px) {
+  .benefits-carousel__screenshot {
+    max-width: 370px;
+    top: 13px
+  }
+}
+
+@media (min-width: 768px) {
+  .benefits-carousel__screenshot {
+    max-width: 560px;
+    top: 25px
+  }
+}
