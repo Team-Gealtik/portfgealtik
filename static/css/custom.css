@@ -1,4 +1,4 @@
-
+/*Banner carousel start*/
 .benefits-carousel__headline,
 .benefits-carousel__body-copy,
 .benefits-carousel__body-link {
@@ -127,7 +127,7 @@
 }
 
 .benefits-carousel__body-link {
-  color: #007ee5
+  color: #007ee5  
 }
 
 @media (min-width: 768px) {
@@ -207,7 +207,7 @@
 @media (min-width: 991px) {
   .benefits-carousel__copy {
     max-width: 650px;
-    margin: 0 auto
+    margin: 100 auto
   }
 }
 
@@ -422,7 +422,7 @@
 }
 
 .benefits-carousel__gradient--blue {
-  background-color: #8ac5fd;
+  background-image: url('https://res.cloudinary.com/bimagv/image/upload/v1607593907/a022d62bc462e0a2af2749a251561284_az55xk.png');
   background-size: 100%;
   -webkit-transition: background-color 400ms, background-size 1000ms;
   transition: background-color 400ms, background-size 1000ms
@@ -482,3 +482,4 @@
     top: 25px
   }
 }
+/*Banner Carousel end*/

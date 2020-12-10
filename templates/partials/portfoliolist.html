@@ -1,0 +1,46 @@
+{% load static %}
+
+<section class="portfolio_area section-margin pb-0" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main_title">
+          <p class="top_text">Portfolio <span></span></p>
+          <!--<h2>Check Our Recent <br>
+            Client Work </h2>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="filters portfolio-filter">
+      <ul>
+        <li class="active" data-filter="*">all</li>
+        {% for ctg in portfolio_category %}
+        <li data-filter=".{{ ctg.name }}">{{ ctg.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="filters-content">
+      <div class="row portfolio-grid">
+        <div class="grid-sizer col-md-3 col-lg-3"></div>
+        {% if portfolio %}
+        {% for portfolio in portfolio %}
+        <div class="col-lg-6 col-md-6 all {{ portfolio.category }}">
+          <div class="single_portfolio">
+            <img class="img-fluid w-100" src="{{ portfolio.photo.url }}" alt="">
+            <div class="overlay"></div>
+            <div class="short_info">
+              <h4><a href="{% url 'portfolio-details' portfolio.id %}">{{ portfolio.title }}</a></h4>
+              <p>{{ portfolio.portfolio_type }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2 class="text-danger">Portfolio Not Available!</h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section><br/><br/>
