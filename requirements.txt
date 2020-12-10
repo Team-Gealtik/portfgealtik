@@ -1,6 +1,6 @@
 django==3.1.4
 django-js-asset==1.2.2
-Pillow=8.0.1
-pytz=2020.4
+Pillow==8.0.1
+pytz==2020.4
 sqlparse==0.4.1
-django-ckeditor=6.0.0
+django-ckeditor==6.0.0
