@@ -164,5 +164,6 @@ CKEDITOR_CONFIGS = {
 }
 
 # Activate Django-Heroku.
+# If you check Django-Heroku's README, it says "at the very bottom" as shown below
 django_heroku.settings(locals())
 del DATABASES['default']['OPTIONS']['sslmode']
