@@ -1,1 +1,1 @@
-web: gunicorn proftgealtik-production.wsgi
+web: gunicorn personal_portfolio.wsgi.application
