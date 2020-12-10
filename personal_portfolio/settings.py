@@ -23,16 +23,10 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
 # This should already be in your settings.py
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 # This is new
-#options = DATABASES['default'].get('OPTIONS', {})
-#options.pop('sslmode', None)
-
-# This should already be in your settings.py
-#django_heroku.settings(locals())
-# This is new
-#options = DATABASES['default'].get('OPTIONS', {})
-#options.pop('sslmode', None)
+options = DATABASES['default'].get('OPTIONS', {})
+options.pop('sslmode', None)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
