@@ -85,23 +85,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'portfolio_db',
-#         'USER': 'bima',
-#         'PASSWORD': 'apaanlupa',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
+#DATABASES = {}
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'portfolio_db',
+         'USER': 'sajib1066',
+         'PASSWORD': 'sajib1066',
+         'HOST': 'localhost',
+         'PORT': '',
+     }
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
