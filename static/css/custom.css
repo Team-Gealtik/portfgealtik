@@ -620,3 +620,155 @@ section .section-title {
 }
 /*Section Team end --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------*/
+
+/*Section Portfolio start --------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-margin {
+  margin: 6rem 3rem 3rem 3rem;
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+
+.header2-titles {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: auto;
+  margin: auto;
+  color: #464646
+}
+
+
+.main-image {
+  max-width: 300px;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+}
+
+
+.larger-upper-margin {
+  margin-top: 3rem;
+}
+
+.social-icons {
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.icon-size {
+  size: auto;
+  
+}
+
+.cta-footer {
+  font-weight: 500;
+}
+
+p {
+  max-width: auto;
+  margin: auto;
+  line-height: 2rem;
+}
+
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: auto;
+  text-align: center;
+  grid-gap: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.projects-grid {
+  grid-column: span 6;
+  background-color: #f8f8f8;
+  border: solid 1px #f0f0f0;
+  border-radius: 2%;
+  padding: 5px;
+}
+
+.projects-grid:hover {
+  background-color: #f0f0f0;
+  border-color: #d8d8d8;
+  margin: auto;
+  transform: scale(0.98);
+}
+
+.project-images {
+  padding: 10px;
+  border-radius: 15px;
+  width: 800px;
+  max-width: 95%;
+  height: 200px;
+  align-items: center;
+  object-fit: cover;
+  shadow: solid 2px;
+  
+}
+
+.bold-text {
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 500px) {
+
+  .header2-titles {
+      font-size: 1.1rem;
+      font-weight: 400;
+      width: auto;
+      margin: auto;
+    }
+  
+  .header1-titles {
+      font-size: 1.6rem;
+    }
+  
+  .main-image {
+      width: 175px;
+    }
+  
+  .larger-text {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+  
+  .page-margin {
+      margin: 2rem 1rem 3rem 1rem;
+    }
+  
+  .larger-upper-margin {
+      margin-top: 1.5rem;
+    }
+  
+  .social-icons {
+      max-width: 250px;
+    }
+  
+  }
+
+
+@media (max-width: 800px) {
+  
+  .projects-wrapper > * {
+    grid-column: span 12;
+  }
+  
+} 
+/*Section Portfolio start --------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------*/

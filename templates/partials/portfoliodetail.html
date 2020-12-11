@@ -1,0 +1,72 @@
+<section class="portfolio_details_area section-margin">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10">
+          <div class="portfolio_details_inner">
+            <div class="row">
+              <div class="col-12">
+                  <div class="left_img">
+                      <img class="img-fluid" src="{{ item.photo.url }}" alt="" width="919" height="479">
+                  </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-7 mb-4 mb-lg-0">
+                <p>{{ item.description|safe }}</p>
+              </div>
+              <div class="col-lg-5">
+                <div class="portfolio_right_text mt-30">
+                    <h4 class="text-uppercase">Project Info</h4>
+                    <h3>{{ item.title }}</h3>
+                    <ul class="list">
+                        <li><span>Rating</span>: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i></li>
+                        <li><span>Client</span>: {{ item.client }}</li>
+                        <li><span>Website</span>: {{ item.website }}</li>
+                        <li><span>Completed</span>: {{ item.complete_date }}</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10">
+          <div class="portfolio_details_inner">
+            <div class="row">
+              <div class="col-12">
+                  <div class="left_img">
+                      <img class="img-fluid" src="{{ item.photo.url }}" alt="" width="919" height="479">
+                  </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-7 mb-4 mb-lg-0">
+                <p>{{ item.description|safe }}</p>
+              </div>
+              <div class="col-lg-5">
+                <div class="portfolio_right_text mt-30">
+                    <h4 class="text-uppercase">Project Info</h4>
+                    <h3>{{ item.title }}</h3>
+                    <ul class="list">
+                        <li><span>Rating</span>: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i></li>
+                        <li><span>Client</span>: {{ item.client }}</li>
+                        <li><span>Website</span>: {{ item.website }}</li>
+                        <li><span>Completed</span>: {{ item.complete_date }}</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
